@@ -8,18 +8,12 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-
-Explain how your project works
 The *8-bit Binary Symmetry Detector (BSD)* project is designed to check whether an 8-bit binary input is symmetric, meaning it reads the same from left to right and right to left (like a palindrome). The 8-bit input is represented as $x_7x_6x_5x_4x_3x_2x_1x_0$. For the input to be symmetric, the following conditions must hold true simultaneously: $x_7 = x_0$, $x_6 = x_1$, $x_5 = x_2$, and $x_4 = x_3$. The circuit implements this by using *XNOR gates* to compare each pair of bits, since an XNOR outputs 1 only when the inputs are equal. The results of the four XNOR comparisons are then fed into an *AND gate*, ensuring that the final output S becomes 1 only when all pairs match, indicating a symmetric input; otherwise, S is 0. The Verilog testbench applies all possible 256 input combinations, computes the expected result in software, and compares it against the hardware output to verify correctness. During simulation, signals such as the input vector, the circuit’s output, the expected result, and any mismatch count are observed on GTKWave. For example, an input like 11111111 or 10000001 produces an output S = 1 (symmetric), while an input like 11001010 produces S = 0 (not symmetric). This makes the BSD project a simple yet effective demonstration of digital design principles, combining logic gate design with HDL simulation and verification.
 
 
 ## How to test
 
-Explain how to use your project
-
-You can test your *8-bit Binary Symmetry Detector (BSD)* in two main ways:
-
----
+You can test the *8-bit Binary Symmetry Detector (BSD)* in two main ways:
 
 ### *1. Simulation (most common)*
 
